@@ -49,9 +49,6 @@ public class ProjectSecurityConfig {
             }
         }));
 
-//        http.sessionManagement(session -> session.invalidSessionUrl("/invalidSession")
-//                .maximumSessions(5));
-//        http.csrf(csrf -> csrf.disable());
 
         http.csrf(csrfConfig -> csrfConfig.csrfTokenRequestHandler(csrfTokenRequestAttributeHandler)
                 .ignoringRequestMatchers( "/contact","/register")
